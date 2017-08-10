@@ -14,7 +14,10 @@ public:
 
     void fetch(Queue!string fq)
     {
-        // [PH]
+        while(!fq.isEmpty)
+        {
+            auto filename = fq.dequeue();
+        }
     }
 
     void push(Queue!string pq)
@@ -24,4 +27,5 @@ public:
 
 private:
     Socket client;
+    string fetchRootPath = "/files/";
 }
